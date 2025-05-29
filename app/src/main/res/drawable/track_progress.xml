@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF5722"/> <!-- צבע ההתקדמות -->
+    <corners android:radius="10dp"/> <!-- עגלול הקצוות -->
+    <size android:height="10dp"/> <!-- גובה ההתקדמות -->
+</shape>

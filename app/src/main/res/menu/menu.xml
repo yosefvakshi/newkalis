@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- כפתור המוזיקה – תמיד בשורת‑הפעולה -->
+    <item
+        android:id="@+id/action_music"
+        android:title="נגן מוזיקת רקע"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_home"
+        android:title="מסך הבית"
+        app:showAsAction="ifRoom" />
+
+    <!-- כל השאר ייכנסו ל‑overflow אוטומטית -->
+    <item
+        android:id="@+id/action_main"
+        android:title="לתרגילים" />
+
+    <item
+        android:id="@+id/action_search_park"
+        android:title="חיפוש פארקים"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_setting"
+        android:title="חימום לפני אימון" />
+
+    <item
+        android:id="@+id/action_exit"
+        android:title="יציאה" />
+
+</menu>

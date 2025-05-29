@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- הרקע של ה-Track -->
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/track_background" /> <!-- השתמש ב-drawable לרקע -->
+
+    <!-- ההתקדמות של ה-Track -->
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/track_progress" /> <!-- השתמש ב-drawable להתקדמות -->
+</layer-list>

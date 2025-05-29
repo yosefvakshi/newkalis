@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">קליסטניקס</string>
+    <string name="gemini_api_key">e</string>
+
+    <string-array name="activity_levels">
+        <item>מנוחה מוחלטת (שכיבה במיטה)</item>
+        <item>פעילות מינימלית (עבודה משרדית)</item>
+        <item>פעילות קלה (התעמלות 1-3 פעמים בשבוע)</item>
+        <item>פעילות מתונה (התעמלות 3-5 פעמים בשבוע)</item>
+        <item>פעילות אינטנסיבית (התעמלות 6-7 פעמים בשבוע)</item>
+        <item>פעילות אקסטרימית (ספורטאי מקצועי)</item>
+    </string-array>
+
+    <string name="challenge_title">אתגרי קליסטניקס</string>
+    <string name="level_title">שלבים לתרגיל</string>
+    <string name="success_button">הצלחתי</string>
+    <string name="success_message">כל הכבוד! השלמת את השלב בהצלחה</string>
+    <string name="level_reopened">השלב נפתח מחדש</string>
+    <string name="error_loading_challenge">שגיאה בטעינת האתגר</string>
+
+    <!-- מוזיקה -->
+    <string name="music_on">הפעל מוזיקה</string>
+    <string name="music_off">כבה מוזיקה</string>
+
+    <string name="title_activity_map_search">MapSearchActivity</string>
+    <string name="title_activity_localpark">localpark</string>
+</resources>

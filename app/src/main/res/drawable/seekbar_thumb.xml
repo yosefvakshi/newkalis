@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:width="40dp"
+        android:height="40dp"/> <!-- שינוי גודל ה-Thumb -->
+    <solid android:color="#FF5722"/> <!-- צבע ה-Thumb -->
+    <corners android:radius="20dp"/> <!-- מעגלים בקצוות -->
+</shape>
