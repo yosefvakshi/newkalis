@@ -3,41 +3,49 @@ plugins {
 }
 
 android {
-    namespace = "com.example.kalistanics" // ודא שזה תואם את שם החבילה שלך בקוד
-    compileSdk = 34 // הגרסה העדכנית ביותר שבה הפרויקט מתבסס
+    namespace = "com.example.kalistanics"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.kalistanics" // ודא שזה תואם את שם החבילה שלך
-        minSdk = 24 // גרסת אנדרואיד מינימלית נתמכת
-        targetSdk = 34 // גרסת אנדרואיד המטרה
-        versionCode = 1 // מספר גרסה עבור חנות האפליקציות
-        versionName = "1.0" // שם גרסה למעקב
+        applicationId = "com.example.kalistanics"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" // עבור בדיקות אוטומטיות
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false // אם תגדיר true, קובץ ה-APK ידחס
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11 // תמיכה ב-Java 11
+        sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
 dependencies {
     // תלויות לפרויקט
-    implementation(libs.appcompat) // AppCompatActivity ותמיכה אחורנית
-    implementation(libs.material) // עיצוב חומר (Material Design)
-    implementation(libs.activity) // תלות לניהול פעילויות
-    implementation(libs.constraintlayout) // פריסות מסוג Constraint
-    testImplementation(libs.junit) // עבור בדיקות יחידה
-    androidTestImplementation(libs.ext.junit) // בדיקות מורחבות
-    androidTestImplementation(libs.espresso.core) // בדיקות UI
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
+    implementation(libs.play.services.location)
+    // Volley - תקשורת רשת
+    implementation(libs.volley)
+
+    // Google Maps
+    implementation(libs.google.maps)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
 }
