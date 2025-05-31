@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">קליסטניקס</string>
-    <string name="gemini_api_key">e</string>
+    <string name="gemini_api_key">AIzaSyAD081XecvohN4uqoIkOo5pKMBylCjfvQQ</string>
 
     <string-array name="activity_levels">
         <item>מנוחה מוחלטת (שכיבה במיטה)</item>

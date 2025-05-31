@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         // יצירת מסד הנתונים
         dbHelper = new DatabaseHelper(this);
-        
+
         // הגדרת כפתורים
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);

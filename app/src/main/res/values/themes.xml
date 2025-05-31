@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Kalistanics" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+    <!-- ערכת הנושא הבסיסית של האפליקציה -->
+    <style name="Base.Theme.Kalistanics" parent="Theme.MaterialComponents">
+        <!-- כאן אפשר להתאים אישית את ערכת הנושא הקלה -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-
-    <style name="Theme.Kalistanics" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="ButtonRed" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/RED</item>
+        <item name="android:textColor">@color/black</item> <!-- טקסט לבן יתאים על רקע אדום -->
+    </style>
+    <style name="Theme.Kalistanics" parent="Base.Theme.Kalistanics">
+        <!-- צבעי המפתח הראשיים -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="android:textColor">@color/black</item>
+
+        <!-- הגדרת רקע לבן לכל החלונות -->
         <item name="android:windowBackground">@color/white</item>
+
+        <!-- הגדרת צבע טקסט שחור כברירת מחדל -->
+        <item name="android:textColor">@color/black</item>
+
+        <!-- הגדרת רקע לבן לתפריטים נפתחים (popup menus) -->
+        <item name="android:popupBackground">@color/white</item>
+
+        <!-- ביטול מצב כהה (Dark Mode) כדי שלא ישנה צבעים אוטומטית -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+        <!-- הגדרת ערכת נושא עבור התפריטים הנפתחים בשורת הפעולה (ActionBar) -->
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
     </style>
 </resources>

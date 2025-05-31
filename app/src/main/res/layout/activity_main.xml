@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    >
 
     <TextView
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/button_background"
+        style="@style/ButtonRed"
         android:text="Muscle Up"
         android:textSize="20dp"
         />
@@ -37,7 +38,7 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/button_background"
+        style="@style/ButtonRed"
         android:text="Back Lever"
         android:textSize="20dp"/>
 
@@ -50,7 +51,7 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/button_background"
+        style="@style/ButtonRed"
         android:text=" Front Lever"
         android:textSize="20dp"/>
 
@@ -63,9 +64,10 @@
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/button_background"
+        style="@style/ButtonRed"
         android:text="Planche"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        />
 
     <Space
         android:layout_width="match_parent"

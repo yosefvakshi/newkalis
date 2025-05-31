@@ -9,8 +9,8 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_home"
-        android:title="מסך הבית"
+        android:id="@+id/action_calorie"
+        android:title="מאזן קלוריות"
         app:showAsAction="ifRoom" />
 
     <!-- כל השאר ייכנסו ל‑overflow אוטומטית -->
@@ -24,7 +24,7 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_setting"
+        android:id="@+id/action_video"
         android:title="חימום לפני אימון" />
 
     <item
