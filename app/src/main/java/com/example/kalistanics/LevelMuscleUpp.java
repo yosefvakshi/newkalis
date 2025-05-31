@@ -1,8 +1,5 @@
 package com.example.kalistanics;
 
-import static androidx.core.app.ActivityCompat.finishAffinity;
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
@@ -11,7 +8,6 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -23,8 +19,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Arrays;
 
 public class LevelMuscleUpp extends AppCompatActivity {
     private HorizontalScrollView scrollView1, scrollView2, scrollView3, scrollView4, scrollView5;
@@ -116,9 +110,9 @@ public class LevelMuscleUpp extends AppCompatActivity {
 
         // טעינת נתונים
         loadLevelData();
-            }
+    }
 
-            @Override
+    @Override
     protected void onResume() {
         super.onResume();
         try {
@@ -247,7 +241,7 @@ public class LevelMuscleUpp extends AppCompatActivity {
                                     // נסה לטעון מתיקיית drawable
                                     try {
                                         java.io.InputStream is = getResources().openRawResource(
-                                            getResources().getIdentifier(formattedImageName, "raw", getPackageName())
+                                                getResources().getIdentifier(formattedImageName, "raw", getPackageName())
                                         );
                                         android.graphics.Bitmap bitmap = android.graphics.BitmapFactory.decodeStream(is);
                                         imageView.setImageBitmap(bitmap);
@@ -416,28 +410,25 @@ public class LevelMuscleUpp extends AppCompatActivity {
             completeButton.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#E0E0E0")));
         }
     }
-// פונקצית מניו
-@Override
-public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.menu, menu);  // טוען את הקובץ menu_main.xml
-    return true;
-}
+
+    // פונקצית מניו
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);  // טוען את הקובץ menu_main.xml
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-            int id = item.getItemId();
+        int id = item.getItemId();
 
-            if (id == R.id.action_search_park) {
-                // כאן מפעילים את ה-ParksMapActivity
-                Intent intent = new Intent(this, ParksMapActivity.class);
-                startActivity(intent);
-                return true;
-            }
-
-
-
-        if (id == R.id.action_exit) {          // יציאה
+        if (id == R.id.action_search_park) {
+            // כאן מפעילים את ה-ParksMapActivity
+            Intent intent = new Intent(this, ParksMapActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_exit) {          // יציאה
             finishAffinity();
             return true;
 
@@ -445,9 +436,14 @@ public boolean onCreateOptionsMenu(Menu menu) {
             finish();
             return true;
 
-        } else if (id == R.id.action_setting) { // סרטון חימום
+        } else if (id == R.id.action_video) { // סרטון חימום
             String videoUrl = "https://www.youtube.com/watch?v=uTV-sR7_QgY";
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(videoUrl)));
+            return true;
+
+        } else if (id == R.id.action_calorie) { // סרטון חימום
+            Intent intent = new Intent(this, CalorieActivity.class);
+            startActivity(intent);
             return true;
 
         } else if (id == R.id.action_music) {   // כפתור המוזיקה החדש
@@ -459,7 +455,9 @@ public boolean onCreateOptionsMenu(Menu menu) {
     }
 
 
-    /** מפעיל/מפסיק מוזיקה ומעדכן אייקון וטקסט */
+    /**
+     * מפעיל/מפסיק מוזיקה ומעדכן אייקון וטקסט
+     */
     private void toggleMusic(MenuItem item) {
         if (musicOn) {
             player.pause();

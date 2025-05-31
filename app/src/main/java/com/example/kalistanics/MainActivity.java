@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         // יצירת מסד הנתונים
         dbHelper = new DatabaseHelper(this);
-        
+
         // הגדרת כפתורים
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
             // בדיקה שהמספר חוקי
             if (challengeNumber < 1 || challengeNumber > 4) {
                 Toast.makeText(this, "שגיאה: מספר אתגר לא חוקי", Toast.LENGTH_SHORT).show();
-            return;
-        }
+                return;
+            }
 
             // פתיחת דף השלבים עם מזהה האתגר
             Intent intent = new Intent(this, LevelMuscleUpp.class);
-            intent.putExtra("challenge_id", (long)challengeNumber);  // המרה מפורשת ל-Long
-                startActivity(intent);
+            intent.putExtra("challenge_id", (long) challengeNumber);  // המרה מפורשת ל-Long
+            startActivity(intent);
 
         } catch (Exception e) {
             android.util.Log.e("MainActivity", "Error opening challenge: " + e.getMessage());
