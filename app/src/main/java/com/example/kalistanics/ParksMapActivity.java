@@ -1,9 +1,14 @@
 package com.example.kalistanics;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -29,7 +34,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ParksMapActivity extends AppCompatActivity implements OnMapReadyCallback {
-
+    private MediaPlayer player;
+    private boolean musicOn = false;
     private GoogleMap mMap;
     private FusedLocationProviderClient fusedLocationClient;
     private LatLng currentLocation;
@@ -138,4 +144,69 @@ public class ParksMapActivity extends AppCompatActivity implements OnMapReadyCal
             }
         }
     }
+
+    // פונקצית מניו
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);  // טוען את הקובץ menu_main.xml
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.action_search_park) {
+            // כאן מפעילים את ה-ParksMapActivity
+            Intent intent = new Intent(this, ParksMapActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_exit) {          // יציאה
+            finishAffinity();
+            return true;
+
+        } else if (id == R.id.action_main) {   // חזרה
+            finish();
+            return true;
+
+        } else if (id == R.id.action_video) { // סרטון חימום
+            String videoUrl = "https://www.youtube.com/watch?v=uTV-sR7_QgY";
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(videoUrl)));
+            return true;
+
+        } else if (id == R.id.action_calorie) { // סרטון חימום
+            Intent intent = new Intent(this, CalorieActivity.class);
+            startActivity(intent);
+            return true;
+
+        } else if (id == R.id.action_music) {   // כפתור המוזיקה החדש
+            toggleMusic(item);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    /**
+     * מפעיל/מפסיק מוזיקה ומעדכן אייקון וטקסט
+     */
+    private void toggleMusic(MenuItem item) {
+        if (musicOn) {
+            player.pause();
+            item.setIcon(R.drawable.ic_music_note); // אייקון "כבוי"
+            item.setTitle(R.string.music_on);       // "הפעל מוזיקה"
+        } else {
+            player.start();
+            item.setIcon(R.drawable.ic_music_off);  // אייקון "דולק"
+            item.setTitle(R.string.music_off);      // "כבה מוזיקה"
+        }
+        musicOn = !musicOn;
+    }
+
+
+
+
+
 }

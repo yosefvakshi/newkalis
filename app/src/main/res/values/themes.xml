@@ -5,10 +5,19 @@
         <!-- כאן אפשר להתאים אישית את ערכת הנושא הקלה -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+    <style name="ButtonGray" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/darker_gray</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
     <style name="ButtonRed" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/RED</item>
         <item name="android:textColor">@color/black</item> <!-- טקסט לבן יתאים על רקע אדום -->
+    </style>
+
+    <style name="CustomSpinner" parent="Widget.AppCompat.Spinner"><!-- SPINER -->
+        <item name="android:popupBackground">@android:color/white</item> <!-- רקע החלונית -->
+        <item name="android:textColor">@android:color/black</item>        <!-- צבע הטקסט -->
     </style>
 
     <style name="Theme.Kalistanics" parent="Base.Theme.Kalistanics">

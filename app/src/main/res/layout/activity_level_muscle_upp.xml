@@ -14,12 +14,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            style="@style/ButtonGray"
             android:text="Level 1" />
 
         <HorizontalScrollView
             android:id="@+id/scrollView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:visibility="gone">
 
             <LinearLayout
@@ -29,19 +30,21 @@
                 android:orientation="horizontal" />
         </HorizontalScrollView>
 
-                        <Button
-                            android:id="@+id/completeButton1"
+        <Button
+            android:id="@+id/completeButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            style="@style/ButtonGray"
             android:text="הצלחתי" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
+            style="@style/ButtonGray"
             android:text="Level 2" />
 
         <HorizontalScrollView
@@ -57,19 +60,21 @@
                 android:orientation="horizontal" />
         </HorizontalScrollView>
 
-                        <Button
-                            android:id="@+id/completeButton2"
+        <Button
+            android:id="@+id/completeButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            style="@style/ButtonGray"
             android:text="הצלחתי" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
+            style="@style/ButtonGray"
             android:text="Level 3" />
 
         <HorizontalScrollView
@@ -85,19 +90,21 @@
                 android:orientation="horizontal" />
         </HorizontalScrollView>
 
-                        <Button
-                            android:id="@+id/completeButton3"
+        <Button
+            android:id="@+id/completeButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            style="@style/ButtonGray"
             android:text="הצלחתי" />
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
+            style="@style/ButtonGray"
             android:text="Level 4" />
 
         <HorizontalScrollView
@@ -113,19 +120,21 @@
                 android:orientation="horizontal" />
         </HorizontalScrollView>
 
-                        <Button
-                            android:id="@+id/completeButton4"
+        <Button
+            android:id="@+id/completeButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            style="@style/ButtonGray"
             android:text="הצלחתי" />
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
+            style="@style/ButtonGray"
             android:text="Level 5" />
 
         <HorizontalScrollView
@@ -141,12 +150,13 @@
                 android:orientation="horizontal" />
         </HorizontalScrollView>
 
-                        <Button
-                            android:id="@+id/completeButton5"
+        <Button
+            android:id="@+id/completeButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            style="@style/ButtonGray"
             android:text="הצלחתי" />
 
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>

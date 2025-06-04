@@ -112,9 +112,9 @@ public class CalorieActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.activity_levels,
-                android.R.layout.simple_spinner_item
+                R.layout.spinner_item  // שימוש בקובץ ה־layout המותאם לפריט הנבחר
         );
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item); // שימוש בקובץ ה־layout המותאם לפריטי הרשימה הנפתחת
         spActivityLevel.setAdapter(adapter);
 
         spActivityLevel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -129,6 +129,8 @@ public class CalorieActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void calculateCalorieNeeds() {
         // Get user inputs

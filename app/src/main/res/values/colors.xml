@@ -5,7 +5,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="darker_gray">#FF888888</color>
-    <color name="hint_color">#888888</color>
+    <color name="hint_color">#000000</color>
     <color name="light_gray">#D3D3D3</color> <!-- אפור בהיר -->
     <color name="RED">#9B2335</color>
 </resources>
